@@ -1,0 +1,162 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  font-family: serif;
+}
+body{
+  background-color: orange;
+  min-height: 600px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+label{
+  font-size: 40px;
+}
+.wrapper .container{
+  overflow: hidden;
+  display:flex;
+  background-color: #f6f6f6;
+  flex-direction: column;
+  height:33vh;
+  width:50vh;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 5px 5px 1px black;
+}
+.data{
+  padding:10px;
+  width: 50vh;
+  height: 5vh;
+  display: flex;
+  border-top: 2px solid black;
+  justify-content: space-between;
+  background-color: #f6f6e6;
+}
+li{
+  list-style: none;
+}
+.rdforstar{
+  display: none;
+}
+
+
+#star1:hover ~ .container .stars .star1,
+#star1:checked ~ .container .stars .star1,
+
+#star2:hover ~ .container .stars .star1,
+#star2:hover ~ .container .stars .star2,
+#star2:checked ~ .container .stars .star1,
+#star2:checked ~ .container .stars .star2,
+
+#star3:hover ~ .container .stars .star1,
+#star3:hover ~ .container .stars .star2,
+#star3:hover ~ .container .stars .star3,
+#star3:checked ~ .container .stars .star1,
+#star3:checked ~ .container .stars .star2,
+#star3:checked ~ .container .stars .star3,
+
+#star4:hover ~ .container .stars .star1,
+#star4:hover ~ .container .stars .star2,
+#star4:hover ~ .container .stars .star3,
+#star4:hover ~ .container .stars .star4,
+#star4:checked ~ .container .stars .star1,
+#star4:checked ~ .container .stars .star2,
+#star4:checked ~ .container .stars .star3,
+#star4:checked ~ .container .stars .star4,
+
+#star5:hover ~ .container .stars .star1,
+#star5:hover ~ .container .stars .star2,
+#star5:hover ~ .container .stars .star3,
+#star5:hover ~ .container .stars .star4,
+#star5:hover ~ .container .stars .star5,
+#star5:checked ~ .container .stars .star1,
+#star5:checked ~ .container .stars .star2,
+#star5:checked ~ .container .stars .star3,
+#star5:checked ~ .container .stars .star4,
+#star5:checked ~ .container .stars .star5{
+  color: orange;
+}
+.data .text::before{
+  content:"Rate your experience";
+}
+.data .count::before{
+  content: "0 out of 5";
+}
+#star1:checked ~ .container .data .text::before{
+  content:"I hate it "
+}
+#star1:checked ~ .container .data .count::before{
+  content:"1 out of 5"
+}
+#star2:checked ~ .container .data .text::before{
+  content:"i Just dont like"
+}
+#star2:checked ~ .container .data .count::before{
+  content:"2 out of 5"
+}
+#star3:checked ~ .container .data .text::before{
+  content:"like on an average"
+}
+#star3:checked ~ .container .data .count::before{
+  content:"3 out of 5"
+}
+#star4:checked ~ .container .data .text::before{
+  content:"I like it very much"
+}
+#star4:checked ~ .container .data .count::before{
+  content:"4 out of 5" 
+}
+#star5:checked ~ .container .data .text::before{
+  content:"This is awesome"
+}
+#star5:checked ~ .container .data .count::before{
+  content:"Full Stars"
+}
+.pic::before{
+  text-shadow: 0 10px 25px orange;
+  content:"⭐";
+  font-size: 90px;
+}
+#star1:checked ~ .container .emoji .pic::before{
+  content:"😵";
+  font-size: 90px;
+}
+#star2:checked ~ .container .emoji .pic::before{
+  content:"😔";
+  font-size: 90px;
+}
+#star3:checked ~ .container .emoji .pic::before{
+  content:"😐";
+  font-size: 90px;
+}
+#star4:checked ~ .container .emoji .pic::before{
+  content:"😊";
+  font-size: 90px;
+}
+#star5:checked ~ .container .emoji .pic::before{
+  content:"🥰";
+  font-size: 90px;
+}
+.Buttons{
+  display:flex;
+  height: 8vh;
+  justify-content: space-between;
+  width:51vh;
+  margin-top: 20px;
+}
+Button{
+  width:100px;
+  border-radius: 10px;
+  background-color: lightgray;
+  border: 1px solid black;
+  transition: all 0.1s linear;
+}
+Button:active{
+  background-color: orange;
+  transform: scale(1.05);
+  color:white;
+  box-shadow: 0 0 10px yellow;
+}
